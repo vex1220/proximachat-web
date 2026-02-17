@@ -16,7 +16,7 @@ export default function TermsOfService() {
         <Link href="/">
           <Button
             variant="ghost"
-            className="mb-transparent text-foreground hover:bg-secondary hover:text-secondary-foreground font-normal mb-8"
+            className="bg-transparent text-foreground hover:bg-secondary hover:text-secondary-foreground font-normal mb-8"
           >
             <ArrowLeft className="w-5 h-5 mr-2" strokeWidth={1.5} />
             Back to Home
