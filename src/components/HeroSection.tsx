@@ -61,9 +61,11 @@ export default function HeroSection() {
           Welcome to <AuroraText>Proxima</AuroraText>
         </h1>
 
-        <p className="animate-element text-lg md:text-xl font-light text-gray-100 max-w-2xl mb-12">
-          Discover the future of digital connection. Experience innovation that
-          brings you closer to what matters most.
+        <p className="animate-element text-lg md:text-xl font-light text-gray-100 max-w-2xl mb-4">
+          Anonymous, location-based chat for your campus and community.
+        </p>
+        <p className="animate-element text-base md:text-lg font-light text-gray-300 max-w-xl mb-12">
+          No accounts. No real names. Just the conversations happening around you — right now.
         </p>
 
         <Button
