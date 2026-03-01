@@ -9,32 +9,32 @@ gsap.registerPlugin(ScrollTrigger);
 
 const faqs = [
   {
-    q: 'Do I need an account?',
-    a: 'Yes. Proxima uses email + password for sign-in. Your email is never shown publicly — people see your display ID (or "Anonymous" when you post anonymously).',
+    q: "Do I need an account?",
+    a: "Yes. Proxima uses email + password for sign-in. Your email is never shown publicly — people see your display ID (or \"Anonymous\" when you post anonymously).",
   },
   {
-    q: 'How does anonymity work?',
-    a: 'Proxima is pseudonymous by default (no real name required). You can enable Anonymous Mode to post or chat without showing your display ID.',
+    q: "How does anonymity work?",
+    a: "Proxima is pseudonymous by default (no real name required). You can enable Anonymous Mode to post or chat without showing your display ID.",
   },
   {
-    q: 'How does location work?',
-    a: 'Proxima uses your device's foreground location to show nearby locations and power the Nearby tab. You control your feed radius and proximity radius in Settings.',
+    q: "How does location work?",
+    a: "Proxima uses your device's foreground location to show nearby locations and power the Nearby tab. You control your feed radius and proximity radius in Settings.",
   },
   {
-    q: 'Do you store my precise GPS coordinates?',
+    q: "Do you store my precise GPS coordinates?",
     a: "For the Nearby feature, messages are saved with latitude/longitude for functionality and safety. We don't display your exact GPS pin to other users.",
   },
   {
-    q: 'How do you keep Proxima safe?',
-    a: 'Content is checked with automated moderation, users can report posts/messages, and admins can remove content or suspend accounts. You can also block users and mute locations.',
+    q: "How do you keep Proxima safe?",
+    a: "Content is checked with automated moderation, users can report posts/messages, and admins can remove content or suspend accounts. You can also block users and mute locations.",
   },
   {
-    q: 'Can I delete my content or my account?',
-    a: 'Yes. You can delete your account from Settings. When you delete your account, your content is removed from the app and identifying account data is scrubbed. See the Privacy Policy for details.',
+    q: "Can I delete my content or my account?",
+    a: "Yes. You can delete your account from Settings. When you delete your account, your content is removed from the app and identifying account data is scrubbed. See the Privacy Policy for details.",
   },
   {
-    q: 'Where is Proxima available?',
-    a: 'Proxima launches with a curated set of locations (starting with Tallahassee/FSU). The experience expands as new locations are added.',
+    q: "Where is Proxima available?",
+    a: "Proxima launches with a curated set of locations (starting with Tallahassee/FSU). The experience expands as new locations are added.",
   },
 ];
 
