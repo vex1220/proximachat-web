@@ -22,7 +22,7 @@ const faqs = [
   },
   {
     q: 'Do you store my precise GPS coordinates?',
-    a: 'For the Nearby feature, messages are saved with latitude/longitude for functionality and safety. We don't display your exact GPS pin to other users.',
+    a: "For the Nearby feature, messages are saved with latitude/longitude for functionality and safety. We don't display your exact GPS pin to other users.",
   },
   {
     q: 'How do you keep Proxima safe?',

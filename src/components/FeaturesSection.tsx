@@ -36,7 +36,7 @@ const features = [
     icon: MessageCircle,
     title: 'Nearby Broadcast',
     description:
-      'Send a nearby message to people within your proximity radius — your exact GPS pin isn't shown publicly.',
+      "Send a nearby message to people within your proximity radius — your exact GPS pin isn't shown publicly.",
   },
   {
     icon: Shield,
