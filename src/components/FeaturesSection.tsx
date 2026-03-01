@@ -10,28 +10,39 @@ gsap.registerPlugin(ScrollTrigger);
 const features = [
   {
     icon: Eye,
-    title: 'Fully Anonymous',
-    description: 'No real names, no profiles. Your identity stays yours.',
+    title: 'Pseudonymous + Anonymous Mode',
+    description:
+      'Sign in with email, choose a display ID, and toggle Anonymous Mode to hide your display ID on posts and chats.',
   },
   {
     icon: MapPin,
-    title: 'Hyper-Local',
-    description: 'Connect with people physically near you — your campus, your neighborhood.',
-  },
-  {
-    icon: Zap,
-    title: 'Real-Time',
-    description: 'Messages and karma happen instantly via live WebSocket connections.',
-  },
-  {
-    icon: Shield,
-    title: 'Community Moderation',
-    description: 'Karma-based voting and active moderation keep conversations healthy.',
+    title: 'Map-First Communities',
+    description:
+      'Explore a map of curated locations and open the feed + chatrooms for any place.',
   },
   {
     icon: MessageCircle,
-    title: 'No Social Graph',
-    description: 'No followers, no feeds, no algorithmic noise. Just the people around you.',
+    title: 'Posts by Location',
+    description:
+      'Create posts tied to a location, comment, and vote — your feed is scoped by your radius.',
+  },
+  {
+    icon: Zap,
+    title: 'Real-Time Chatrooms',
+    description:
+      'Live messaging, replies, typing indicators, and voting over WebSockets.',
+  },
+  {
+    icon: MessageCircle,
+    title: 'Nearby Broadcast',
+    description:
+      'Send a nearby message to people within your proximity radius — your exact GPS pin isn't shown publicly.',
+  },
+  {
+    icon: Shield,
+    title: 'Safety Controls',
+    description:
+      'Report content, block users, mute locations, plus automated + admin moderation and account suspensions.',
   },
 ];
 
@@ -90,10 +101,10 @@ export default function FeaturesSection() {
         <div ref={headingRef} className="text-center space-y-4 max-w-2xl mx-auto">
           <p className="text-sm uppercase tracking-widest text-accent font-medium">Why Proxima</p>
           <h2 className="text-4xl md:text-5xl font-bold text-foreground">
-            Anonymous. Local. Real-Time.
+            Pseudonymous. Local. Real-Time.
           </h2>
           <p className="text-lg text-gray-300 leading-relaxed">
-            Proxima is the location-based chat app built for campus communities and local neighborhoods — no accounts, no algorithms, just the conversation happening around you right now.
+            Proxima is a location-based community app built for campus communities and local neighborhoods — sign in, choose a display ID, then chat or post by location. No follower graph, just what's happening nearby.
           </p>
         </div>
 

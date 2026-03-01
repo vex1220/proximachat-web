@@ -9,28 +9,32 @@ gsap.registerPlugin(ScrollTrigger);
 
 const faqs = [
   {
-    q: 'How anonymous is it?',
-    a: 'Completely. Proxima does not require an account, email address, phone number, or any identifying information to use. You are assigned a temporary session identity that changes over time. No real names, no profile photos.',
+    q: 'Do I need an account?',
+    a: 'Yes. Proxima uses email + password for sign-in. Your email is never shown publicly — people see your display ID (or "Anonymous" when you post anonymously).',
   },
   {
-    q: 'Do you track my precise location?',
-    a: 'No. Proxima uses approximate location (typically within a few hundred meters to a kilometer) to place you in nearby chatrooms. We do not log or store your precise GPS coordinates, and location data is not retained after your session ends.',
+    q: 'How does anonymity work?',
+    a: 'Proxima is pseudonymous by default (no real name required). You can enable Anonymous Mode to post or chat without showing your display ID.',
   },
   {
-    q: 'How do you prevent harassment?',
-    a: 'Proxima uses a community karma system where other users can downvote harmful messages, which reduces their visibility. Users can report content directly, and moderators review flagged content promptly. Repeat violators are session-banned. Full details are in our Community Guidelines.',
+    q: 'How does location work?',
+    a: 'Proxima uses your device's foreground location to show nearby locations and power the Nearby tab. You control your feed radius and proximity radius in Settings.',
   },
   {
-    q: 'Can posts and messages be deleted?',
-    a: 'Yes. You can delete your own messages at any time during your session. Reported content that violates our guidelines is removed by moderators. We do not retain message logs indefinitely — see our Privacy Policy for retention details.',
+    q: 'Do you store my precise GPS coordinates?',
+    a: 'For the Nearby feature, messages are saved with latitude/longitude for functionality and safety. We don't display your exact GPS pin to other users.',
   },
   {
-    q: 'Is Proxima only for students?',
-    a: "No — Proxima works for any location-based community. While campus communities are a key focus, anyone in a neighborhood, venue, or local area can join and participate in nearby chatrooms.",
+    q: 'How do you keep Proxima safe?',
+    a: 'Content is checked with automated moderation, users can report posts/messages, and admins can remove content or suspend accounts. You can also block users and mute locations.',
   },
   {
-    q: 'What stops bad actors from creating new sessions?',
-    a: 'Session bans are reinforced by device fingerprinting and rate limiting at the network level. While no system is perfect, our combination of community moderation and technical controls significantly raises the friction for repeat offenders.',
+    q: 'Can I delete my content or my account?',
+    a: 'Yes. You can delete your account from Settings. When you delete your account, your content is removed from the app and identifying account data is scrubbed. See the Privacy Policy for details.',
+  },
+  {
+    q: 'Where is Proxima available?',
+    a: 'Proxima launches with a curated set of locations (starting with Tallahassee/FSU). The experience expands as new locations are added.',
   },
 ];
 

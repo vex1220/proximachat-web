@@ -62,10 +62,10 @@ export default function HeroSection() {
         </h1>
 
         <p className="animate-element text-lg md:text-xl font-light text-gray-100 max-w-2xl mb-4">
-          Anonymous, location-based chat for your campus and community.
+          Pseudonymous, location-based chat for your campus and community.
         </p>
         <p className="animate-element text-base md:text-lg font-light text-gray-300 max-w-xl mb-12">
-          No accounts. No real names. Just the conversations happening around you — right now.
+          Sign in, pick a display ID, and jump into threads by location — post anonymously when you want.
         </p>
 
         <Button

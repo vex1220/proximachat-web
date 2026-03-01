@@ -26,8 +26,8 @@ function CopyButton({ text }: { text: string }) {
 }
 
 const oneLiners = [
-  'Proxima is the anonymous, location-based chat app for campus communities and local neighborhoods.',
-  'Real conversations with the people around you — no accounts, no names, no algorithms.',
+  'Proxima is a pseudonymous, location-based community app for campus communities and local neighborhoods.',
+  'Real conversations with the people around you — choose a display ID, post anonymously when you want.',
   'Proxima connects you to the conversations happening near you, right now.',
 ];
 
