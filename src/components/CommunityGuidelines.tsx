@@ -10,7 +10,7 @@ export default function CommunityGuidelines() {
     window.scrollTo(0, 0);
   }, []);
 
-  const lastUpdated = 'February 26, 2026';
+  const lastUpdated = 'March 2, 2026';
 
   return (
     <div className="min-h-screen bg-background text-foreground">

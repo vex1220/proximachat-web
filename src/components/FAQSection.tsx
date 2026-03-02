@@ -9,32 +9,44 @@ gsap.registerPlugin(ScrollTrigger);
 
 const faqs = [
   {
-    q: "Do I need an account?",
-    a: "Yes. Proxima uses email + password for sign-in. Your email is never shown publicly — people see your display ID (or \"Anonymous\" when you post anonymously).",
+    q: "Do I need an account to use Proxima?",
+    a: "Yes — Proxima uses email and password sign-in. Your email is never shown to anyone. Other users see your display ID, or just \"Anonymous\" when you have Anonymous Mode turned on.",
   },
   {
-    q: "How does anonymity work?",
-    a: "Proxima is pseudonymous by default (no real name required). You can enable Anonymous Mode to post or chat without showing your display ID.",
+    q: "How does Anonymous Mode work?",
+    a: "Proxima is pseudonymous by default — you pick a display ID, not your real name. Flip on Anonymous Mode in Settings and your display ID disappears from everything you post or send. You can turn it on and off whenever you want.",
   },
   {
-    q: "How does location work?",
-    a: "Proxima uses your device's foreground location to show nearby locations and power the Nearby tab. You control your feed radius and proximity radius in Settings.",
+    q: "What is the Nearby tab?",
+    a: "Nearby lets you broadcast a message to everyone physically around you within your proximity radius. Think of it like shouting into the crowd at a game — anyone close enough can see it. You can also send images and GIFs.",
   },
   {
-    q: "Do you store my precise GPS coordinates?",
-    a: "For the Nearby feature, messages are saved with latitude/longitude for functionality and safety. We don't display your exact GPS pin to other users.",
+    q: "How does the map work?",
+    a: "The map shows every active location near you — your campus buildings, neighborhoods, venues, and more. Tap any pin to see its live feed and jump into its chatroom. Your own location pin is never shown to other users.",
   },
   {
-    q: "How do you keep Proxima safe?",
-    a: "Content is checked with automated moderation, users can report posts/messages, and admins can remove content or suspend accounts. You can also block users and mute locations.",
+    q: "Can I share photos and GIFs?",
+    a: "Yes. You can attach images and GIFs to posts, comments, chatroom messages, and nearby broadcasts. GIF search is built right into the composer.",
   },
   {
-    q: "Can I delete my content or my account?",
-    a: "Yes. You can delete your account from Settings. When you delete your account, your content is removed from the app and identifying account data is scrubbed. See the Privacy Policy for details.",
+    q: "What if I don't want to see a certain location?",
+    a: "Mute it. Hit the three-dot menu on any location and mute it — it disappears from your feed until you unmute it. You can manage all your muted locations in Safety & Privacy settings.",
+  },
+  {
+    q: "Do you store my GPS coordinates?",
+    a: "Proxima uses your location to place you in nearby rooms and power the Nearby tab. For Nearby messages, coordinates are stored to support the feature and keep things safe. Your exact GPS pin is never shown publicly to other users.",
+  },
+  {
+    q: "How does Proxima handle safety and moderation?",
+    a: "Content goes through automated moderation, users can report anything that violates the rules, and admins can remove content or suspend accounts. You can also block individual users and mute locations you're done with.",
+  },
+  {
+    q: "Can I delete my account?",
+    a: "Yes, from Settings you can request full account deletion. Your content is removed from the app and your identifying account data is scrubbed. Check the Privacy Policy for the full details.",
   },
   {
     q: "Where is Proxima available?",
-    a: "Proxima launches with a curated set of locations (starting with Tallahassee/FSU). The experience expands as new locations are added.",
+    a: "Proxima launched with a curated set of locations starting at FSU and Tallahassee. New locations are being added as we grow — if you want your campus or neighborhood added, reach out.",
   },
 ];
 
@@ -60,7 +72,7 @@ function FAQItem({ q, a, index }: { q: string; a: string; index: number }) {
       >
         <span className="text-foreground font-medium text-sm md:text-base pr-4">{q}</span>
         <ChevronDown
-          className={`w-5 h-5 text-accent flex-shrink-0 transition-transform duration-300 ${open ? 'rotate-180' : ''}`}
+          className={`w-5 h-5 text-primary flex-shrink-0 transition-transform duration-300 ${open ? 'rotate-180' : ''}`}
           strokeWidth={1.5}
         />
       </button>
@@ -96,7 +108,7 @@ export default function FAQSection() {
         <div ref={headingRef} className="text-center space-y-3">
           <p className="text-sm uppercase tracking-widest text-accent font-medium">FAQ</p>
           <h2 className="text-4xl md:text-5xl font-bold text-foreground">Your questions, answered</h2>
-          <p className="text-gray-400 text-lg">Everything you need to know about how Proxima works and keeps you safe.</p>
+          <p className="text-gray-400 text-lg">Everything you need to know about how Proxima works.</p>
         </div>
 
         <div ref={listRef} className="space-y-3">

@@ -10,7 +10,7 @@ export default function TermsOfService() {
     window.scrollTo(0, 0);
   }, []);
 
-  const lastUpdated = 'February 21, 2026';
+  const lastUpdated = 'March 2, 2026';
 
   return (
     <div className="min-h-screen bg-background text-foreground">
@@ -78,7 +78,7 @@ export default function TermsOfService() {
           <div className="space-y-4">
             <h2 className="text-2xl font-semibold text-foreground">4) User Content</h2>
             <p>
-              &ldquo;User Content&rdquo; includes messages, posts, comments, votes, and other content you submit.
+              &ldquo;User Content&rdquo; includes messages, posts, comments, votes, images, GIFs, nearby broadcasts, and other content you submit.
             </p>
 
             <div className="space-y-2">

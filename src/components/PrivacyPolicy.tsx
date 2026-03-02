@@ -10,7 +10,7 @@ export default function PrivacyPolicy() {
     window.scrollTo(0, 0);
   }, []);
 
-  const lastUpdated = 'February 21, 2026';
+  const lastUpdated = 'March 2, 2026';
 
   return (
     <div className="min-h-screen bg-background text-foreground">
@@ -86,8 +86,7 @@ export default function PrivacyPolicy() {
           <div className="space-y-3">
             <h2 className="text-2xl font-semibold text-foreground">1) What Proxima Does</h2>
             <p>
-              Proxima is a location-based community app that lets you view nearby locations, join location-based chatrooms,
-              send messages, create posts and comments, and vote on content.
+              Proxima is a location-based community app. You can explore a live map of nearby locations, join real-time chatrooms, send messages and media (images and GIFs), create posts and comments, vote on content, broadcast proximity messages to nearby users, and mute locations you no longer want in your feed.
             </p>
           </div>
 
@@ -102,8 +101,7 @@ export default function PrivacyPolicy() {
                   password (stored as a hashed value), and email verification status.
                 </li>
                 <li>
-                  <span className="text-foreground font-medium">User content</span>: chat messages, posts, comments, votes, and any
-                  feedback you submit.
+                  <span className="text-foreground font-medium">User content</span>: chat messages, posts, comments, votes, images, GIFs, nearby broadcasts, and any feedback you submit.
                 </li>
               </ul>
             </div>

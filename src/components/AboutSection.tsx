@@ -56,32 +56,29 @@ export default function AboutSection() {
       className="py-16 md:py-24 px-8 md:px-16 bg-background"
     >
       <div className="max-w-7xl mx-auto">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-          {/* Left: Text Content */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
           <div ref={contentRef} className="space-y-6">
-            <h2 className="text-4xl md:text-5xl font-bold text-foreground">
-              About Proxima
+            <p className="text-sm uppercase tracking-widest text-accent font-medium">About Proxima</p>
+            <h2 className="text-4xl md:text-5xl font-bold text-foreground leading-tight">
+              Built for the people<br />right next to you
             </h2>
-            <p className="text-lg md:text-xl text-gray-300 leading-relaxed">
-              Proxima is designed to revolutionize the way you connect with the
-              digital world. Our platform combines cutting-edge technology with
-              intuitive design to deliver an experience that&apos;s both powerful and
-              accessible.
+            <p className="text-lg text-gray-300 leading-relaxed">
+              Proxima is a location-based social app built around where you actually are — your campus, your neighborhood, your favorite spots. Open the map, see what&apos;s nearby, and jump into the conversation happening right now.
             </p>
-            <p className="text-lg md:text-xl text-gray-300 leading-relaxed">
-              Whether you&apos;re exploring new possibilities or deepening existing
-              connections, Proxima provides the tools and insights you need to
-              thrive in an ever-evolving digital landscape.
+            <p className="text-lg text-gray-300 leading-relaxed">
+              Post to location feeds, hang out in real-time chatrooms, or broadcast a message to anyone within range. You choose your display name — and you can go fully anonymous whenever you want. No follower counts, no influencer culture, just genuine connection with the people around you.
+            </p>
+            <p className="text-lg text-gray-300 leading-relaxed">
+              Proxima started at FSU and is growing from there. Wherever you are, if there are people nearby, there&apos;s a conversation waiting.
             </p>
           </div>
 
-          {/* Right: Image */}
           <div ref={imageRef} className="flex justify-center lg:justify-end">
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
               src="https://c.animaapp.com/mlqu7ewhRQBwwq/img/ai_2.png"
-              alt="abstract geometric composition"
-              className="w-full max-w-lg rounded-lg shadow-2xl"
+              alt="Proxima community visualization"
+              className="w-full max-w-lg rounded-2xl shadow-2xl"
               loading="lazy"
             />
           </div>

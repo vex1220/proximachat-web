@@ -37,7 +37,6 @@ export default function HeroSection() {
 
   return (
     <section ref={heroRef} className="relative h-screen w-full overflow-hidden">
-      {/* Video Background */}
       <div className="absolute inset-0 z-0">
         <video
           src="https://c.animaapp.com/mlqu7ewhRQBwwq/img/ai_1.mp4"
@@ -48,36 +47,41 @@ export default function HeroSection() {
           muted
           playsInline
         />
-        {/* Dark Gradient Overlay */}
-        <div className="absolute inset-0 bg-gradient-to-b from-black/0 via-black/40 to-black/100" />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/10 via-black/50 to-black/90" />
       </div>
 
-      {/* Content */}
       <div
         ref={contentRef}
         className="relative z-10 flex flex-col items-center justify-center h-full px-8 md:px-16 text-center"
       >
-        <h1 className="animate-element text-5xl md:text-7xl font-bold mb-6 text-white">
-          Welcome to <AuroraText>Proxima</AuroraText>
+        <p className="animate-element text-xs uppercase tracking-[0.3em] text-cyan-400 font-medium mb-6 opacity-90">
+          Location-based social chat
+        </p>
+
+        <h1 className="animate-element text-5xl md:text-7xl lg:text-8xl font-bold mb-6 text-white leading-tight">
+          Talk to the people<br />
+          around you on{' '}
+          <AuroraText>Proxima</AuroraText>
         </h1>
 
-        <p className="animate-element text-lg md:text-xl font-light text-gray-100 max-w-2xl mb-4">
-          Pseudonymous, location-based chat for your campus and community.
+        <p className="animate-element text-lg md:text-xl font-light text-gray-200 max-w-2xl mb-3 leading-relaxed">
+          Join chatrooms at your campus, your neighborhood, wherever you are right now.
+          Post to the feed, go fully anonymous, or just vibe with whoever&apos;s nearby.
         </p>
-        <p className="animate-element text-base md:text-lg font-light text-gray-300 max-w-xl mb-12">
-          Sign in, pick a display ID, and jump into threads by location — post anonymously when you want.
+        <p className="animate-element text-sm md:text-base text-gray-400 max-w-xl mb-12">
+          No followers. No algorithms. Just what&apos;s happening near you.
         </p>
 
         <Button
           onClick={scrollToAbout}
-          className="animate-element bg-primary text-primary-foreground hover:bg-primary/90 px-8 py-6 text-base font-normal transition-all duration-300 ease-in-out hover:scale-103"
+          className="animate-element bg-primary text-primary-foreground hover:bg-primary/90 px-10 py-6 text-base font-medium transition-all duration-300 ease-in-out hover:scale-105 rounded-full"
           size="lg"
         >
-          Learn More
+          See How It Works
         </Button>
 
         <div className="animate-element absolute bottom-12 left-1/2 transform -translate-x-1/2">
-          <ChevronDown className="w-8 h-8 text-white animate-bounce" strokeWidth={1.5} />
+          <ChevronDown className="w-8 h-8 text-white/60 animate-bounce" strokeWidth={1.5} />
         </div>
       </div>
     </section>

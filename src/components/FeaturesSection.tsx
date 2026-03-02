@@ -3,46 +3,64 @@
 import { useEffect, useRef } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { Shield, MapPin, Zap, Eye, MessageCircle } from 'lucide-react';
+import { Shield, MapPin, Zap, Eye, MessageCircle, Radio } from 'lucide-react';
 
 gsap.registerPlugin(ScrollTrigger);
 
 const features = [
   {
     icon: Eye,
-    title: 'Pseudonymous + Anonymous Mode',
+    title: 'Go Anonymous, Anytime',
     description:
-      'Sign in with email, choose a display ID, and toggle Anonymous Mode to hide your display ID on posts and chats.',
+      'Sign in with a display ID and flip on Anonymous Mode whenever you want. Post, chat, and comment without your name attached — the choice is always yours.',
   },
   {
     icon: MapPin,
-    title: 'Map-First Communities',
+    title: 'Map-First Discovery',
     description:
-      'Explore a map of curated locations and open the feed + chatrooms for any place.',
+      'Open the map and see every active location around you. Tap any spot to browse its feed and chatrooms. Your world, laid out in front of you.',
   },
   {
     icon: MessageCircle,
-    title: 'Posts by Location',
+    title: 'Location Feeds & Posts',
     description:
-      'Create posts tied to a location, comment, and vote — your feed is scoped by your radius.',
+      'Post photos, GIFs, and text to any location you\'re at. Comment, upvote, downvote — the best content rises naturally. Your feed radius is fully in your control.',
   },
   {
     icon: Zap,
-    title: 'Real-Time Chatrooms',
+    title: 'Live Chatrooms',
     description:
-      'Live messaging, replies, typing indicators, and voting over WebSockets.',
+      'Every location has a real-time chatroom powered by WebSockets. Send images and GIFs, reply to specific messages, vote on what you love — all happening live.',
   },
   {
-    icon: MessageCircle,
+    icon: Radio,
     title: 'Nearby Broadcast',
     description:
-      "Send a nearby message to people within your proximity radius — your exact GPS pin isn't shown publicly.",
+      'Send a message to anyone within your proximity radius — no group chat setup, no friending required. Just a direct signal to whoever\'s around you right now.',
   },
   {
     icon: Shield,
-    title: 'Safety Controls',
+    title: 'Built-In Safety',
     description:
-      'Report content, block users, mute locations, plus automated + admin moderation and account suspensions.',
+      'Block users, mute locations you\'re over, report bad content — and our moderation system handles the rest. You\'re in control of your experience.',
+  },
+];
+
+const screenshots = [
+  {
+    src: '/screenshot-chatroom.png',
+    label: 'Location Chatrooms',
+    caption: 'Share images & GIFs, vote on messages, reply in real time',
+  },
+  {
+    src: '/screenshot-nearby.png',
+    label: 'Nearby Broadcast',
+    caption: 'Message anyone within your proximity radius',
+  },
+  {
+    src: '/screenshot-map.png',
+    label: 'Map View',
+    caption: 'Discover every active location around you',
   },
 ];
 
@@ -97,26 +115,24 @@ export default function FeaturesSection() {
     >
       <div className="max-w-7xl mx-auto space-y-20">
 
-        {/* Header */}
         <div ref={headingRef} className="text-center space-y-4 max-w-2xl mx-auto">
-          <p className="text-sm uppercase tracking-widest text-accent font-medium">Why Proxima</p>
+          <p className="text-sm uppercase tracking-widest text-accent font-medium">What Proxima Does</p>
           <h2 className="text-4xl md:text-5xl font-bold text-foreground">
             Pseudonymous. Local. Real-Time.
           </h2>
           <p className="text-lg text-gray-300 leading-relaxed">
-            Proxima is a location-based community app built for campus communities and local neighborhoods — sign in, choose a display ID, then chat or post by location. No follower graph, just what's happening nearby.
+            Everything you need to connect with the people and places around you — with the freedom to be as anonymous as you want.
           </p>
         </div>
 
-        {/* Feature Cards */}
         <div ref={cardsRef} className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {features.map(({ icon: Icon, title, description }) => (
             <div
               key={title}
-              className="feature-card bg-background rounded-xl p-6 border border-border hover:border-accent/50 transition-colors duration-300 space-y-4"
+              className="feature-card bg-background rounded-xl p-6 border border-border hover:border-primary/40 transition-colors duration-300 space-y-4"
             >
-              <div className="w-10 h-10 rounded-lg bg-accent/10 flex items-center justify-center">
-                <Icon className="w-5 h-5 text-accent" strokeWidth={1.5} />
+              <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center">
+                <Icon className="w-5 h-5 text-primary" strokeWidth={1.5} />
               </div>
               <h3 className="text-lg font-semibold text-foreground">{title}</h3>
               <p className="text-gray-400 text-sm leading-relaxed">{description}</p>
@@ -124,31 +140,28 @@ export default function FeaturesSection() {
           ))}
         </div>
 
-        {/* Screenshot Placeholders */}
-        <div className="space-y-6">
-          <h3 className="text-2xl font-semibold text-foreground text-center">See It In Action</h3>
-          <div ref={mockupsRef} className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {[
-              { label: 'Nearby Chatrooms', caption: 'See rooms within your radius' },
-              { label: 'Anonymous Chat', caption: 'No names, no pressure' },
-              { label: 'Karma & Voting', caption: 'Community keeps quality up' },
-            ].map(({ label, caption }) => (
+        <div className="space-y-8">
+          <div className="text-center space-y-2">
+            <h3 className="text-3xl font-bold text-foreground">See It In Action</h3>
+            <p className="text-gray-400">Real screenshots from the app</p>
+          </div>
+          <div ref={mockupsRef} className="grid grid-cols-1 md:grid-cols-3 gap-6 items-end">
+            {screenshots.map(({ src, label, caption }) => (
               <div
                 key={label}
                 className="mockup-card bg-background rounded-2xl border border-border overflow-hidden"
               >
-                {/* Placeholder screen */}
-                <div className="aspect-[9/16] bg-gradient-to-br from-background via-secondary to-background flex flex-col items-center justify-center gap-3 relative">
-                  <div className="absolute inset-0 opacity-5"
-                    style={{ backgroundImage: 'radial-gradient(circle, hsl(260 85% 62%) 1px, transparent 1px)', backgroundSize: '24px 24px' }}
+                <div className="aspect-[9/16] overflow-hidden bg-secondary">
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img
+                    src={src}
+                    alt={label}
+                    className="w-full h-full object-cover object-top"
+                    loading="lazy"
                   />
-                  <div className="w-12 h-12 rounded-xl bg-accent/10 border border-accent/20 flex items-center justify-center">
-                    <MessageCircle className="w-6 h-6 text-accent/60" strokeWidth={1.5} />
-                  </div>
-                  <p className="text-xs text-gray-500 font-medium tracking-wide uppercase">Screenshot Coming Soon</p>
                 </div>
                 <div className="p-4 border-t border-border">
-                  <p className="font-medium text-foreground text-sm">{label}</p>
+                  <p className="font-semibold text-foreground text-sm">{label}</p>
                   <p className="text-gray-400 text-xs mt-1">{caption}</p>
                 </div>
               </div>

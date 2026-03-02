@@ -10,21 +10,24 @@ gsap.registerPlugin(ScrollTrigger);
 type Status = 'done' | 'in-progress' | 'planned';
 
 const roadmap: { status: Status; label: string; description: string }[] = [
-  { status: 'done', label: 'Proximity-based chatrooms', description: 'Join rooms within a configurable radius of your current location.' },
-  { status: 'done', label: 'Anonymous sessions', description: 'No account required. No names stored.' },
-  { status: 'done', label: 'Real-time messaging', description: 'Live WebSocket communication with instant delivery.' },
-  { status: 'done', label: 'Karma & voting system', description: 'Upvote and downvote messages to surface the best content.' },
-  { status: 'in-progress', label: 'Map view', description: 'Visual map of active chatrooms near you.' },
-  { status: 'in-progress', label: 'Reporting & moderation tools', description: 'In-app reporting with moderator review queue.' },
-  { status: 'planned', label: 'Campus verification', description: 'Optional .edu email verification for campus-only rooms.' },
-  { status: 'planned', label: 'Direct messages', description: 'Anonymous 1-on-1 conversations with nearby users.' },
-  { status: 'planned', label: 'Room creation controls', description: 'Custom radius, topic tags, and time-limited rooms.' },
-  { status: 'planned', label: 'iOS & Android apps', description: 'Native mobile apps for a smoother experience.' },
+  { status: 'done', label: 'Location-based chatrooms', description: 'Real-time rooms tied to physical locations — join any room within your radius.' },
+  { status: 'done', label: 'Anonymous mode', description: 'Toggle anonymity at any time. Post and chat without your display ID showing.' },
+  { status: 'done', label: 'Real-time messaging', description: 'Live WebSocket communication with instant delivery and typing indicators.' },
+  { status: 'done', label: 'Karma & voting', description: 'Upvote and downvote posts, comments, and messages to surface the best content.' },
+  { status: 'done', label: 'Map view', description: 'Visual map of all active locations around you — tap any pin to jump in.' },
+  { status: 'done', label: 'Image & GIF sharing', description: 'Send photos and GIFs in chatrooms, posts, and nearby broadcasts.' },
+  { status: 'done', label: 'Nearby broadcast', description: 'Message everyone within your proximity radius without revealing your exact location.' },
+  { status: 'done', label: 'Muted locations', description: 'Mute any location so it stops showing up in your feed — full control over what you see.' },
+  { status: 'done', label: 'Reporting & moderation', description: 'In-app reporting, automated content review, admin tools, and account suspensions.' },
+  { status: 'in-progress', label: 'Campus verification', description: 'Optional .edu email verification for campus-only rooms and verified badges.' },
+  { status: 'in-progress', label: 'Direct messages', description: 'Private 1-on-1 conversations with users you meet in the app.' },
+  { status: 'planned', label: 'Custom rooms', description: 'Create your own room with a custom radius, topic tags, and expiration time.' },
+  { status: 'planned', label: 'iOS & Android launch', description: 'Public launch on the App Store and Google Play.' },
 ];
 
 const statusConfig: Record<Status, { icon: typeof CheckCircle2; color: string; label: string }> = {
-  done: { icon: CheckCircle2, color: 'text-green-400', label: 'Shipped' },
-  'in-progress': { icon: Clock, color: 'text-accent', label: 'In Progress' },
+  done: { icon: CheckCircle2, color: 'text-emerald-400', label: 'Shipped' },
+  'in-progress': { icon: Clock, color: 'text-primary', label: 'In Progress' },
   planned: { icon: Circle, color: 'text-gray-500', label: 'Planned' },
 };
 
@@ -52,11 +55,10 @@ export default function RoadmapSection() {
 
         <div ref={headingRef} className="text-center space-y-3">
           <p className="text-sm uppercase tracking-widest text-accent font-medium">Roadmap</p>
-          <h2 className="text-4xl md:text-5xl font-bold text-foreground">What&apos;s coming</h2>
-          <p className="text-gray-400 text-lg">We ship fast and in the open. Here&apos;s what we&apos;ve built and where we&apos;re headed.</p>
+          <h2 className="text-4xl md:text-5xl font-bold text-foreground">What we&apos;ve built</h2>
+          <p className="text-gray-400 text-lg">We ship fast and in the open. Here&apos;s where we are and where we&apos;re headed.</p>
         </div>
 
-        {/* Legend */}
         <div className="flex flex-wrap gap-6 justify-center text-sm">
           {(['done', 'in-progress', 'planned'] as Status[]).map(s => {
             const { icon: Icon, color, label } = statusConfig[s];
@@ -75,7 +77,7 @@ export default function RoadmapSection() {
             return (
               <div
                 key={label}
-                className="roadmap-item flex items-start gap-4 p-4 rounded-xl border border-border bg-secondary hover:border-accent/30 transition-colors duration-200"
+                className="roadmap-item flex items-start gap-4 p-4 rounded-xl border border-border bg-secondary hover:border-primary/30 transition-colors duration-200"
               >
                 <Icon className={`w-5 h-5 mt-0.5 flex-shrink-0 ${color}`} strokeWidth={1.5} />
                 <div>
@@ -88,7 +90,7 @@ export default function RoadmapSection() {
         </div>
 
         <p className="text-center text-xs text-gray-500">
-          Roadmap is subject to change. We don&apos;t promise timelines we can&apos;t keep.
+          Roadmap reflects current priorities and may evolve as we grow.
         </p>
 
       </div>
