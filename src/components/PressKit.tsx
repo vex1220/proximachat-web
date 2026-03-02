@@ -140,7 +140,7 @@ export default function PressKit() {
             <h2 className="text-2xl font-semibold text-foreground">Key Facts</h2>
             <div className="bg-secondary rounded-xl border border-border divide-y divide-border">
               {[
-                ['Founded', '2024'],
+                ['Founded', '2026'],
                 ['Category', 'Social / Communication'],
                 ['Platforms', 'Web (iOS & Android coming soon)'],
                 ['Business model', 'Donation-supported, exploring campus licensing'],

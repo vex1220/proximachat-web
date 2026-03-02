@@ -18,7 +18,7 @@ const roadmap: { status: Status; label: string; description: string }[] = [
   { status: 'done', label: 'Image & GIF sharing', description: 'Send photos and GIFs in chatrooms, posts, and nearby broadcasts.' },
   { status: 'done', label: 'Nearby broadcast', description: 'Message everyone within your proximity radius without revealing your exact location.' },
   { status: 'done', label: 'Muted locations', description: 'Mute any location so it stops showing up in your feed — full control over what you see.' },
-  { status: 'done', label: 'Reporting & moderation', description: 'In-app reporting, automated content review, admin tools, and account suspensions.' },
+  { status: 'done', label: 'Reporting & moderation', description: 'In-app reporting, automated content review, and account suspensions.' },
   { status: 'in-progress', label: 'Campus verification', description: 'Optional .edu email verification for campus-only rooms and verified badges.' },
   { status: 'in-progress', label: 'Direct messages', description: 'Private 1-on-1 conversations with users you meet in the app.' },
   { status: 'planned', label: 'Custom rooms', description: 'Create your own room with a custom radius, topic tags, and expiration time.' },
