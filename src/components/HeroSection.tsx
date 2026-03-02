@@ -59,8 +59,6 @@ export default function HeroSection() {
         </p>
 
         <h1 className="animate-element text-5xl md:text-7xl lg:text-8xl font-bold mb-6 text-white leading-tight">
-          Talk to the people<br />
-          around you on{' '}
           <AuroraText>Proxima</AuroraText>
         </h1>
 
