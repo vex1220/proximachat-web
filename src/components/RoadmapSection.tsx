@@ -26,6 +26,8 @@ const roadmap: { status: Status; label: string; description: string }[] = [
   { status: 'in-progress', label: 'Android launch', description: 'Coming to Google Play this week.' },
   { status: 'in-progress', label: 'Campus verification', description: 'Optional .edu email verification for campus-only rooms and verified badges.' },
   { status: 'planned', label: 'Direct messages', description: 'Private 1-on-1 conversations with users you meet in the app.' },
+  { status: 'planned', label: 'User profiles', description: 'View other users\' public profiles, their posts, and karma history.' },
+  { status: 'planned', label: 'Video sharing', description: 'Send and receive videos in chatrooms, posts, and nearby broadcasts.' },
   { status: 'planned', label: 'Custom rooms', description: 'Create your own room with a custom radius, topic tags, and expiration time.' },
 ];
 
