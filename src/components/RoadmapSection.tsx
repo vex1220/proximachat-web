@@ -12,17 +12,21 @@ type Status = 'done' | 'in-progress' | 'planned';
 const roadmap: { status: Status; label: string; description: string }[] = [
   { status: 'done', label: 'Location-based chatrooms', description: 'Real-time rooms tied to physical locations — join any room within your radius.' },
   { status: 'done', label: 'Anonymous mode', description: 'Toggle anonymity at any time. Post and chat without your display ID showing.' },
-  { status: 'done', label: 'Real-time messaging', description: 'Live WebSocket communication with instant delivery and typing indicators.' },
+  { status: 'done', label: 'Real-time messaging', description: 'Live WebSocket communication with instant delivery, typing indicators, and reply threads.' },
   { status: 'done', label: 'Karma & voting', description: 'Upvote and downvote posts, comments, and messages to surface the best content.' },
   { status: 'done', label: 'Map view', description: 'Visual map of all active locations around you — tap any pin to jump in.' },
   { status: 'done', label: 'Image & GIF sharing', description: 'Send photos and GIFs in chatrooms, posts, and nearby broadcasts.' },
   { status: 'done', label: 'Nearby broadcast', description: 'Message everyone within your proximity radius without revealing your exact location.' },
   { status: 'done', label: 'Muted locations', description: 'Mute any location so it stops showing up in your feed — full control over what you see.' },
   { status: 'done', label: 'Reporting & moderation', description: 'In-app reporting, automated content review, and account suspensions.' },
+  { status: 'done', label: 'Emoji reactions', description: 'React to any chat message with an emoji. Reactions update in real time for everyone in the room.' },
+  { status: 'done', label: 'Push notifications', description: 'Get notified when someone comments on your post. Tap to jump straight to the thread.' },
+  { status: 'done', label: 'Dark mode & theming', description: 'Full light and dark mode support with per-campus brand themes persisted across sessions.' },
+  { status: 'done', label: 'iOS launch', description: 'Proxima is live on the App Store. Download it now on iPhone.' },
+  { status: 'in-progress', label: 'Android launch', description: 'Coming to Google Play this week.' },
   { status: 'in-progress', label: 'Campus verification', description: 'Optional .edu email verification for campus-only rooms and verified badges.' },
-  { status: 'in-progress', label: 'Direct messages', description: 'Private 1-on-1 conversations with users you meet in the app.' },
+  { status: 'planned', label: 'Direct messages', description: 'Private 1-on-1 conversations with users you meet in the app.' },
   { status: 'planned', label: 'Custom rooms', description: 'Create your own room with a custom radius, topic tags, and expiration time.' },
-  { status: 'planned', label: 'iOS & Android launch', description: 'Public launch on the App Store and Google Play.' },
 ];
 
 const statusConfig: Record<Status, { icon: typeof CheckCircle2; color: string; label: string }> = {
