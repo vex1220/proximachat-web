@@ -29,6 +29,7 @@ const roadmap: { status: Status; label: string; description: string }[] = [
   { status: 'planned', label: 'User profiles', description: 'View other users\' public profiles, their posts, and karma history.' },
   { status: 'planned', label: 'Video sharing', description: 'Send and receive videos in chatrooms, posts, and nearby broadcasts.' },
   { status: 'planned', label: 'Custom rooms', description: 'Create your own room with a custom radius, topic tags, and expiration time.' },
+  { status: 'planned', label: 'Apple Watch support', description: 'Glanceable notifications, proximity alerts, and quick reactions straight from your wrist.' },
 ];
 
 const statusConfig: Record<Status, { icon: typeof CheckCircle2; color: string; label: string }> = {
